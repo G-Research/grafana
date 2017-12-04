@@ -102,6 +102,58 @@ $switch-height: 1.5rem;
   }
 }
 
+.gf-form-switch--search-result__section, .gf-form-switch--search-result__item {
+  min-width: 2.6rem;
+
+  input + label {
+    background-color: inherit;
+    height: 1.7rem;
+  }
+}
+
+.gf-form-switch--search-result__section {
+  min-width: 3.2rem;
+  margin-right: -0.3rem;
+
+  input + label::before, input + label::after {
+    @include buttonBackground($panel-bg, $panel-bg);
+    color: $gray-2;
+  }
+
+  &:hover {
+    input + label::before {
+      @include buttonBackground($panel-bg, $panel-bg);
+    }
+
+    input + label::after {
+      @include buttonBackground($panel-bg, $panel-bg);
+    }
+
+  }
+}
+
+.gf-form-switch--search-result__item {
+  input + label {
+    height: 2.7rem;
+  }
+
+  input + label::before, input + label::after {
+    @include buttonBackground($list-item-hover-bg, $list-item-hover-bg);
+    color: $gray-2;
+  }
+
+  &:hover {
+    input + label::before {
+      @include buttonBackground($list-item-hover-bg, $list-item-hover-bg);
+    }
+
+    input + label::after {
+      @include buttonBackground($list-item-hover-bg, $list-item-hover-bg);
+    }
+
+  }
+}
+
 gf-form-switch[disabled]  {
   .gf-form-label,
   .gf-form-switch input + label {
